@@ -7,22 +7,20 @@
 The plugin configuration requires a JSON file with the following structure:
 
 ```json
-{
-  "filters": [
-    {
-      "key": "event_property",
-      "type": "number",
-      "operator": "gt",
-      "value": 10
-    },
-    {
-      "key": "event_property",
-      "type": "string",
-      "operator": "includes",
-      "value": "foo"
-    }
-  ]
-}
+[
+  {
+    "key": "event_property",
+    "type": "number",
+    "operator": "gt",
+    "value": 10
+  },
+  {
+    "key": "event_property",
+    "type": "string",
+    "operator": "includes",
+    "value": "foo"
+  }
+]
 ```
 
 **Allowed types and their operators:**
