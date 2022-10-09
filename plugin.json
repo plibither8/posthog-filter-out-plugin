@@ -1,11 +1,11 @@
 {
-  "name": "Value Filter",
-  "url": "https://github.com/plibither8/posthog-value-filter-plugin",
+  "name": "Filter Out Plugin",
+  "url": "https://github.com/plibither8/posthog-filter-out-plugin",
   "description": "Filter out events where property values satisfy the given condition",
   "main": "src/main.ts",
   "config": [
     {
-      "markdown": "All filters must adhere to the JSON schema specified in the project's [README](https://github.com/plibither8/posthog-value-filter-plugin)."
+      "markdown": "All filters must adhere to the JSON schema specified in the project's [README](https://github.com/plibither8/posthog-filter-out-plugin)."
     },
     {
       "key": "filters",

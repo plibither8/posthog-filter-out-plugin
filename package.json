@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "posthog-filter-out-plugin",
   "scripts": {
     "lint": "eslint --ext .ts src",
     "lint:fix": "eslint --ext .ts src --fix",
