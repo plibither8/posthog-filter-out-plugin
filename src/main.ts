@@ -1,13 +1,13 @@
 import { Meta, PluginEvent, PluginAttachment } from "@posthog/plugin-scaffold";
 
-interface Filter {
+export interface Filter {
   property: string;
   type: "string" | "number" | "boolean";
   operator: string;
-  value: string;
+  value: string | number | boolean;
 }
 
-interface PluginMeta
+export interface PluginMeta
   extends Meta<{
     global: {
       filters: Filter[];

@@ -25,7 +25,7 @@ Only keep events where all the following conditions are met:
   {
     "key": "host",
     "type": "string",
-    "operator": "not_is",
+    "operator": "is_not",
     "value": "localhost:8000"
   },
   {
