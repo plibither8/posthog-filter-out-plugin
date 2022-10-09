@@ -1,24 +1,38 @@
-# 🦔 PostHog Value Filter Plugin
+# 🦔 PostHog Filter Out Plugin
 
-> Filter out events where property values satisfy the given condition
+> Injest only those events satisfying the given filter conditions
 
 ## Configuration
 
 The plugin configuration requires a JSON file with the following structure:
 
+**Example filters:**
+
+Only keep events where all the following conditions are met:
+
+- **Email** _does not contain_ **yourcompany.com**
+- **Host** _is not_ **localhost:8000**
+- **Browser version** _greater than_ **100**
+
 ```json
 [
   {
-    "key": "event_property",
-    "type": "number",
-    "operator": "gt",
-    "value": 10
+    "key": "email",
+    "type": "string",
+    "operator": "not_contains",
+    "value": "yourcompany.com"
   },
   {
-    "key": "event_property",
+    "key": "host",
     "type": "string",
-    "operator": "includes",
-    "value": "foo"
+    "operator": "not_is",
+    "value": "localhost:8000"
+  },
+  {
+    "key": "browser_version",
+    "type": "number",
+    "operator": "gt",
+    "value": 100
   }
 ]
 ```

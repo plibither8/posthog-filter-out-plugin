@@ -74,8 +74,8 @@ export function processEvent(
   if (!event.properties) return event;
   const { filters } = meta.global;
 
-  // Check if the event matches any of the filters
-  const match = filters.some((filter) => {
+  // Check if the event satisfies all the filters
+  const keepEvent = filters.every((filter) => {
     const value = event.properties[filter.property];
     if (value === undefined) return false;
 
@@ -85,9 +85,6 @@ export function processEvent(
     return operation(value, filter.value);
   });
 
-  // If matched, then drop the event
-  if (match) return;
-
-  // Otherwise, return the event
-  return event;
+  // If should keep the event, return it, else return undefined
+  return keepEvent ? event : undefined;
 }
