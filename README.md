@@ -17,19 +17,19 @@ Only keep events where all the following conditions are met:
 ```json
 [
   {
-    "key": "email",
+    "property": "email",
     "type": "string",
     "operator": "not_contains",
     "value": "yourcompany.com"
   },
   {
-    "key": "host",
+    "property": "host",
     "type": "string",
     "operator": "is_not",
     "value": "localhost:8000"
   },
   {
-    "key": "browser_version",
+    "property": "browser_version",
     "type": "number",
     "operator": "gt",
     "value": 100
