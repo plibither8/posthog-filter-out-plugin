@@ -2,6 +2,14 @@
 
 > Injest only those events satisfying the given filter conditions
 
+---
+
+## ⚠️ Moved to [PostHog/posthog-filter-out-plugin](https://github.com/PostHog/posthog-filter-out-plugin)
+
+Development and support for this plugin has been moved to [**PostHog/posthog-filter-out-plugin**](https://github.com/PostHog/posthog-filter-out-plugin). Create issues and PRs in PostHog's repository instead.
+
+---
+
 ## Configuration
 
 The plugin configuration requires a JSON file with the following structure:
